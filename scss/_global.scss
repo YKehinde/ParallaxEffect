@@ -1,0 +1,170 @@
+/**
+ * Global app/site styles
+ */
+body {
+	background-color: $color-bg;
+}
+
+.masthead {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+}
+
+.vignette {
+	background: url(../images/vignette.png) top center no-repeat;
+	background-position: cover;
+	pointer-events: none;
+	position: absolute;
+	border: 6px yellow solid;
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+}
+
+/**
+ * Default layout container
+ */
+.l-container {
+	padding-left: #{$layout-margin}px;
+	padding-right: #{$layout-margin}px;
+	width: 95%;
+	max-width: #{$layout-max-width}px;
+	margin: 0 auto;
+
+	.lt-ie9 & {
+		min-width: #{$layout-min-width}px;
+	}
+}
+
+.mouse-bg {
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+position: fixed;
+z-index: -1;
+}
+
+#scene {
+	background-image: url(../images/background.png);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+.layer:nth-child(1) {
+  opacity: 0.7;
+}
+.layer:nth-child(1) button {
+  -webkit-transform: rotate(150deg);
+}
+
+.layer:nth-child(2) {
+  opacity: 1;
+}
+.layer:nth-child(2) button {
+  -webkit-transform: rotate(120deg);
+}
+
+.layer:nth-child(3) {
+  opacity: 0.8;
+}
+.layer:nth-child(3) button {
+  -webkit-transform: rotate(90deg);
+}
+
+.layer {
+	position: relative;
+	border: green solid 1px;
+	height: 900px;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.ground {
+	background: url(../images/ground-trees.png) bottom transparent repeat-x;
+	position: absolute;
+	height: 130%;
+	width: 300%;
+	left: -130%;
+	border: red solid 1px;
+	bottom: 20px;
+}
+
+.trees {	
+	background: url(../images/trees.png) bottom transparent repeat-x;
+	position: absolute;
+	height: 100%;
+	width: 300%;
+	left: -150px;
+	border: blue solid 1px;
+	bottom: 50px;
+}
+
+.rain {	
+	// background: url(../images/rain.png) bottom transparent repeat-x;
+	position: absolute;
+	height: 100%;
+	width: 300%;
+	left: -150px;
+	bottom: 0;
+	 -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+    transform: rotate(20deg);
+}
+
+//Rain drops
+.drop {
+  background: rgba(255,255,255,0.3);
+  // background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall .63s linear infinite;
+  -moz-animation: fall .63s linear infinite;
+}
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+.rain--background {	
+	background: url(../images/rain.png) bottom transparent repeat-x;
+	position: absolute;
+	height: 100%;
+	width: 300%;
+	left: -150px;
+	border: purple solid 1px;
+	bottom: 0;
+}
+
+
+.ground--two {
+	background: url(../images/ground-trees.png) bottom transparent repeat-x;
+	position: absolute;
+	height: 130%;
+	width: 300%;
+	right: -170%;
+	border: red solid 1px;
+	bottom: -20px;
+}
+
+.black {	
+	background: #000000;
+	position: absolute;
+	height: 60px;
+	width: 100%;
+	border: pink solid 1px;
+	bottom: 0;
+}
