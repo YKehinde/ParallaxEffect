@@ -2096,7 +2096,6 @@ body {
   background-position: cover;
   pointer-events: none;
   position: absolute;
-  border: 6px yellow solid;
   z-index: 99;
   height: 100%;
   width: 100%;
@@ -2126,7 +2125,7 @@ body {
 }
 
 #scene {
-  background-image: url(../images/background.png);
+  background-image: url(../images/background.jpg);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2161,7 +2160,6 @@ body {
 
 .layer {
   position: relative;
-  border: green solid 1px;
   height: 900px;
   display: block;
   width: 100%;
@@ -2175,7 +2173,6 @@ body {
   height: 130%;
   width: 300%;
   left: -130%;
-  border: red solid 1px;
   bottom: 20px;
 }
 
@@ -2185,7 +2182,6 @@ body {
   height: 100%;
   width: 300%;
   left: -150px;
-  border: blue solid 1px;
   bottom: 50px;
 }
 
@@ -2230,7 +2226,6 @@ body {
   height: 100%;
   width: 300%;
   left: -150px;
-  border: purple solid 1px;
   bottom: 0;
 }
 
@@ -2240,16 +2235,23 @@ body {
   height: 130%;
   width: 300%;
   right: -170%;
-  border: red solid 1px;
-  bottom: -20px;
+  bottom: -50px;
 }
 
 .black {
-  background: #000000;
+  background: -moz-linear-gradient(top, transparent 90%, black 100%);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, transparent 90%, black 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
   position: absolute;
-  height: 60px;
+  height: 90px;
   width: 100%;
-  border: pink solid 1px;
   bottom: 0;
 }
 
